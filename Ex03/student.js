@@ -21,6 +21,7 @@ function StudentsController($scope)
     *
     * 1. If "new contact" button is clicked the form will be displayed => "FormVisibility" is true => ng-show is called
     * 2. If "save" button is clicked the form will be hided => "FormVisibility" is false => ng-hide is called
+    *
     * */
     $scope.formVisibility = false;
 
