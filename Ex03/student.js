@@ -1,7 +1,5 @@
-/**
- * Created by victor on 12/06/17.
- */
 
+/* Controller to access to de model data*/
 function StudentsController($scope)
 {
     $scope.students = [
