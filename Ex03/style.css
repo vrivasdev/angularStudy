@@ -11,12 +11,12 @@ h1{
 }
 
 .name{
-    font-size : 8px;
+    font-size : 13px;
 }
 
 .course{
+    font-size : 10px;
     font-style: italic;
-    font-size : 13px;
 }
 
 .wrapper {

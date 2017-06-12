@@ -11,9 +11,9 @@
     <div>
         <div class="wrapper">
             <!-- "n-repeat" works like a loop -->
-            <div class="contact-item" ng-repeat="student in students">
-                <div >{{student.name}} - {{student.telephone}}</div>
-                <span>{{student.course}}</span>
+            <div class="contact-item" ng-repeat="student in students | orderBy:'course'">
+                <div class="name">{{student.name}} - {{student.telephone}}</div>
+                <span class="course">{{student.course}}</span>
             </div>
         </div>
     </div>
