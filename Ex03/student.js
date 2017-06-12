@@ -8,4 +8,11 @@ function StudentsController($scope)
         {name:"Pepe", telephone:"04261231231", course:"English"},
         {name:"Juana", telephone:"04121261271", course:"History"}
     ];
+
+    /* Two Way data binding: Saving into the model a new register */
+    $scope.Save = function()
+    {
+        $scope.students.push({name:$scope.newStudent.name, telephone:$scope.newStudent.telephone, course:$scope.newStudent.course});
+    }
 }
+

@@ -8,14 +8,27 @@
 <body ng-controller="StudentsController">
 
     <h1> Students Notebook </h1>
-    <div>
-        <div class="wrapper">
-            <!-- "n-repeat" works like a loop -->
-            <div class="contact-item" ng-repeat="student in students | orderBy:'course'">
-                <div class="name">{{student.name}} - {{student.telephone}}</div>
-                <span class="course">{{student.course}}</span>
-            </div>
+
+    <!-- Row List  -->
+    <div class="wrapper">
+        <!-- "n-repeat" works like a loop -->
+        <div class="contact-item" ng-repeat="student in students | orderBy:'course'">
+            <div class="name">{{student.name}} - {{student.telephone}}</div>
+            <span class="course">{{student.course}}</span>
         </div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="wrapper">
+
+        <h2>Add a contact</h2>
+        <!-- A new object called "newStudent" is needed to save the data -->
+        Name: <input type="text" ng-model="newStudent.name"></input>
+        Telephone: <input type="text" ng-model="newStudent.telephone"></input>
+        Course: <input type="text" ng-model="newStudent.course"></input>
+
+        <button ng-click="Save()"> Save </button>
+
     </div>
 
     <script src="../Framework/angular.min.js" type="text/javascript"></script>
