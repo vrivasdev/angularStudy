@@ -17,9 +17,12 @@
             <span class="course">{{student.course}}</span>
         </div>
     </div>
+    <!-- It's showed when form visibility is False -->
+    <center> <button ng-click="ShowForm()" ng-hide="formVisibility"> New Contact </button></center>
 
+    <!-- It's showed when form visibility is True -->
     <!-- Register Form -->
-    <div class="wrapper">
+    <div ng-show="formVisibility" class="wrapper">
 
         <h2>Add a contact</h2>
         <!-- A new object called "newStudent" is needed to save the data -->
