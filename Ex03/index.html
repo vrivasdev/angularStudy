@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Students</title>
+    <link rel="stylesheet" text="text/css" href="style.css"></link>
 </head>
 <body ng-controller="StudentsController">
 
     <h1> Students Notebook </h1>
     <div>
-        <!-- "n-repeat" works like a loop -->
-        <div ng-repeat="student in students">
-            <div>{{student.name}} - {{student.telephone}}</div>
-            <span>{{student.course}}</span>
+        <div class="wrapper">
+            <!-- "n-repeat" works like a loop -->
+            <div class="contact-item" ng-repeat="student in students">
+                <div >{{student.name}} - {{student.telephone}}</div>
+                <span>{{student.course}}</span>
+            </div>
         </div>
     </div>
 
