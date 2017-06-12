@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body ng-controller="StudentsController">
+
+    <h1> Students Notebook </h1>
+    <div>
+        <div ng-repeat="student in students">
+            <div>{{student.name}} - {{student.telephone}}</div>
+            <span>{{student.course}}</span>
+        </div>
+    </div>
+
+    <script src="../Framework/angular.min.js" type="text/javascript"></script>
+    <script src="student.js" type="text/javascript"></script>
+</body>
+</html>
