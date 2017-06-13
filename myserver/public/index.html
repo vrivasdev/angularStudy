@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" text="text/css" href="style.css"></link>
+</head>
+<body ng-controller="StudentsController">
+
+    <h1> Students Notebook </h1>
+
+    <!-- Row List  -->
+    <div class="wrapper">
+        <!-- "n-repeat" works like a loop -->
+        <div class="contact-item" ng-repeat="student in students | orderBy:'course'">
+            <div class="name">{{student.name}} - {{student.telephone}}</div>
+            <span class="course">{{student.course}}</span>
+        </div>
+    </div>
+    <!-- It's showed when form visibility is False -->
+    <center> <button ng-click="ShowForm()" ng-hide="formVisibility"> New Contact </button></center>
+
+    <!-- It's showed when form visibility is True -->
+    <!-- Register Form -->
+    <div ng-show="formVisibility" class="wrapper">
+
+        <h2>Add a contact</h2>
+        <!-- A new object called "newStudent" is needed to save the data -->
+        Name: <input type="text" ng-model="newStudent.name"></input>
+        Telephone: <input type="text" ng-model="newStudent.telephone"></input>
+        Course: <input type="text" ng-model="newStudent.course"></input>
+
+        <button ng-click="Save()"> Save </button>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js" type="text/javascript"></script>
+    <script>window.angular || document.write('<script scr="lib/angular/angular.min.js"><\/script>')</script>
+    <script src="student.js" type="text/javascript"></script>
+</body>
+</html>
